@@ -99,13 +99,14 @@ public class Main {
                             pAux.setData_ultima_alteracao(temp_data_ultima_alteracao);
                             encontrou = true;
                         }
-                        if(!encontrou)
+                        
+                    }
+                    if(!encontrou)
                             System.out.println("Registro não encontrado!");
-                        else{
-                            System.out.println("Gravando alterações...");
-                            try{Thread.sleep(1000);}catch(Exception erro){}
-                            System.out.println("Registro alterado!");
-                        }
+                    else{
+                        System.out.println("Gravando alterações...");
+                        try{Thread.sleep(1000);}catch(Exception erro){}
+                        System.out.println("Registro alterado!");
                     }
                     break;
                 case 3:
