@@ -1,4 +1,3 @@
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -129,7 +128,7 @@ public class Main {
                         System.out.println("Registro removido!");
                     break;
                 case 4:
-                    System.out.println("\n----- FORAM ENCONTRADOS " + listaPessoas.size() + " REGISTROS -----");
+                    System.out.println("\n---- FORAM ENCONTRADOS " + listaPessoas.size() + " REGISTROS ----");
                     if(listaPessoas.isEmpty())
                         System.out.println("Nenhum registro cadastrado!");
                     else{
@@ -139,7 +138,7 @@ public class Main {
                         });
                         
                     }
-                    System.out.println("---------- FINAL DA LISTA ----------\n");
+                    System.out.println("---------- FINAL DA LISTA ----------");
                     break;
                 case 0:
                     System.out.println("Programa encerrado!");
