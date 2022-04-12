@@ -59,7 +59,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa" + 
+        return "Registrado como Pessoa" + 
                 "\nNome: " + this.getNome() + 
                 "\nTelefone: " + this.getTelefone() + 
                 "\nData de nascimento: " + this.getData_nascimento() + 

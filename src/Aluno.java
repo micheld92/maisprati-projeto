@@ -17,7 +17,7 @@ public class Aluno extends Pessoa{
 
     @Override
     public String toString() {
-        return "Aluno" +
+        return "Registrado como Aluno" +
                "\nNome: " + this.getNome() +
                "\nTelefone: " + this.getTelefone() +
                "\nData de nascimento: " + this.getData_nascimento() +

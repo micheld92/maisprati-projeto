@@ -36,7 +36,7 @@ public class Main {
             System.out.println("3: Excluir registro de Pessoa/Aluno");
             System.out.println("4: Listar Pessoa(s)/Aluno(s)");
             System.out.println("0: Encerrar");
-            System.out.println("Digite o número referente à opção");
+            System.out.println("Digite o número referente à opção: ");
             op = sc.nextInt();
             sc.nextLine();
             switch(op){
@@ -126,21 +126,19 @@ public class Main {
                         System.out.println("Registro não encontrado!");
                     else
                         System.out.println("Registro removido!");
-                    
-                    
                     break;
                 case 4:
-                    System.out.println("\n------ LISTA DE REGISTROS ------");
+                    System.out.println("\n------ FORAM ENCONTRADOS " + listaPessoas.size() + " REGISTROS ------");
                     if(listaPessoas.isEmpty())
                         System.out.println("Nenhum registro cadastrado!");
                     else{
                         listaPessoas.forEach(p -> {
                             System.out.println(p.toString());
+                            System.out.println("------------------------");
                         });
                         
                     }
-                    System.out.println("tamanho da lista: " + listaPessoas.size());//REMOVER ESTA LINHA
-                    System.out.println("------ FIM DA LISTA ------\n");
+                    System.out.println("--------- FINAL DA LISTA ---------\n");
                     break;
                 case 0:
                     System.out.println("Programa encerrado!");
