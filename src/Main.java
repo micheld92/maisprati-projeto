@@ -125,10 +125,10 @@ public class Main {
                         if(pAux.getNome().equals(temp_nome)){
                             System.out.println("TEM CERTEZA QUE DESEJA EXCLUIR ESTE REGISTRO? s/n");
                             op2 = sc.nextLine();  //pega apenas a primeira letra da resposta
-                            if(op2.charAt(0) == 's' || op2.charAt(0) == 'S')
+                            if(op2.charAt(0) == 's' || op2.charAt(0) == 'S'){
                                 pTemp.remove();
-                            System.out.println("Registro removido!");
-                            sc.nextLine();
+                                System.out.println("Registro removido!");
+                            }
                             encontrou = true;
                         }
                     }
