@@ -13,11 +13,11 @@ public class Main {
 
         //ArrayList<Pessoa> listaPessoas = new ArrayList<>();
         List<Pessoa> listaPessoas = new ArrayList();
-        listaPessoas.add(new Pessoa("Roberto Firmino", "11111111", "01/01/1995", "10/04/2022", "11/10/2022"));
-        listaPessoas.add(new Pessoa("João Felix", "2222222", "11/09/1975", "15/04/2022", "11/10/2022"));
-        listaPessoas.add(new Pessoa("Moisés Santos", "3333333", "23/02/1998", "10/03/2022", "11/10/2022"));
-        listaPessoas.add(new Aluno("Pedro Ernesto", "4444444", "17/06/1995", "10/04/2022", "11/10/2022", 8.0));
-        listaPessoas.add(new Aluno("Minerva Duarte", "4444444", "17/06/1995", "10/04/2022", "11/10/2022", 10.0));
+        listaPessoas.add(new Pessoa("Roberto Firmino", "11111111", "02/10/1991", "10/04/2022", "10/04/2022"));
+        listaPessoas.add(new Pessoa("Harry Kane", "2222222", "28/07/1993", "06/04/2022", "10/04/2022"));
+        listaPessoas.add(new Pessoa("Lionel Messi", "3333333", "23/02/1985", "24/07/2022", "01/02/2022"));
+        listaPessoas.add(new Aluno("Pedro Ernesto", "4444444", "17/06/1965", "10/04/2022", "10/04/2022", 8.0));
+        listaPessoas.add(new Aluno("Margarett Hamilton", "4444444", "17/08/1936", "09/04/2022", "09/04/2022", 10.0));
         
         int op;
         String op2;
@@ -97,6 +97,7 @@ public class Main {
                                     break;
                             }
                             temp_data_ultima_alteracao = data_atual.format(formatter);
+                            pAux.setData_ultima_alteracao(temp_data_ultima_alteracao);
                             encontrou = true;
                         }
                         if(!encontrou)
@@ -113,7 +114,7 @@ public class Main {
                     encontrou = false;
                     System.out.println("Digite o nome da pessoa: ");
                     temp_nome = sc.nextLine();
-                    System.out.println("-------");
+                    System.out.println("");
                     pTemp = listaPessoas.iterator();
                     while(pTemp.hasNext()){
                         Pessoa pAux = pTemp.next();
