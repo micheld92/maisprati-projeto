@@ -2,7 +2,7 @@
 
 Este é um sistema CRUD, proposto pela escola Alfamídia e criado para apresentação no programa +PraTi.
 
-O programa foi desenvolvido em Java e utiliza memória volátil para armazenar os dados e roda através do prompt de comando.
+O programa foi desenvolvido em Java, seus dados são armazenados em tempo de execução em memória volátil e roda através do prompt de comando.
 
 O sistema permite a inserção de dois tipos de registros, Pessoa ou Aluno. Se o usuário optar por digitar uma nota, será criado um registro do tipo Aluno, se não, será criado um registro tipo Pessoa.
 
