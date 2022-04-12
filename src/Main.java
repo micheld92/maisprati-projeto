@@ -11,7 +11,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        //ArrayList<Pessoa> listaPessoas = new ArrayList<>();
         List<Pessoa> listaPessoas = new ArrayList();
         listaPessoas.add(new Pessoa("Roberto Firmino", "11111111", "02/10/1991", "10/04/2022", "10/04/2022"));
         listaPessoas.add(new Pessoa("Harry Kane", "2222222", "28/07/1993", "06/04/2022", "10/04/2022"));
