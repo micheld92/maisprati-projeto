@@ -75,6 +75,9 @@ public class Main {
                             System.out.println("1: nome");
                             System.out.println("2: telefone");
                             System.out.println("3: data de nascimento");
+                            if(pAux.getClass() == Aluno.class){
+                                System.out.println("4: nota");
+                            }
                             op = sc.nextInt();
                             sc.nextLine();
                             switch(op){
@@ -93,6 +96,8 @@ public class Main {
                                     temp_data_nascimento = sc.nextLine();
                                     pAux.setData_nascimento(temp_data_nascimento);
                                     break;
+                             
+                                    
                             }
                             temp_data_ultima_alteracao = data_atual.format(formatter);
                             pAux.setData_ultima_alteracao(temp_data_ultima_alteracao);
@@ -118,15 +123,19 @@ public class Main {
                     while(pTemp.hasNext()){
                         Pessoa pAux = pTemp.next();
                         if(pAux.getNome().equals(temp_nome)){
-                            pTemp.remove();
+                            System.out.println("TEM CERTEZA QUE DESEJA EXCLUIR ESTE REGISTRO? s/n");
+                            op2 = sc.nextLine();  //pega apenas a primeira letra da resposta
+                            if(op2.charAt(0) == 's' || op2.charAt(0) == 'S')
+                                pTemp.remove();
+                            System.out.println("Registro removido!");
+                            sc.nextLine();
                             encontrou = true;
                         }
                     }
                     if(!encontrou)
                         System.out.println("Registro não encontrado!");
-                    else
-                        System.out.println("Registro removido!");
-                    break;
+                    else  
+                        break;
                 case 4:
                     System.out.println("\n---- FORAM ENCONTRADOS " + listaPessoas.size() + " REGISTROS ----");
                     if(listaPessoas.isEmpty())
