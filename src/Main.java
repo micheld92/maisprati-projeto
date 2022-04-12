@@ -13,6 +13,12 @@ public class Main {
 
         //ArrayList<Pessoa> listaPessoas = new ArrayList<>();
         List<Pessoa> listaPessoas = new ArrayList();
+        listaPessoas.add(new Pessoa("Roberto Firmino", "11111111", "01/01/1995", "10/04/2022", "11/10/2022"));
+        listaPessoas.add(new Pessoa("João Felix", "2222222", "11/09/1975", "15/04/2022", "11/10/2022"));
+        listaPessoas.add(new Pessoa("Moisés Santos", "3333333", "23/02/1998", "10/03/2022", "11/10/2022"));
+        listaPessoas.add(new Aluno("Pedro Ernesto", "4444444", "17/06/1995", "10/04/2022", "11/10/2022", 8.0));
+        listaPessoas.add(new Aluno("Minerva Duarte", "4444444", "17/06/1995", "10/04/2022", "11/10/2022", 10.0));
+        
         int op;
         String op2;
         String temp_nome;
@@ -23,7 +29,6 @@ public class Main {
         String temp_data_ultima_alteracao;
         double nota_final;
 
-        
         do{
             System.out.println("--------MENU--------");
             System.out.println("1: Inserir registro de Pessoa/Aluno");
@@ -101,11 +106,28 @@ public class Main {
                             try{Thread.sleep(1000);}catch(Exception erro){}
                             System.out.println("Registro alterado!");
                         }
-                                         
                     }
                     break;
                 case 3:
                     System.out.println("Excluir");
+                    encontrou = false;
+                    System.out.println("Digite o nome da pessoa: ");
+                    temp_nome = sc.nextLine();
+                    System.out.println("-------");
+                    pTemp = listaPessoas.iterator();
+                    while(pTemp.hasNext()){
+                        Pessoa pAux = pTemp.next();
+                        if(pAux.getNome().equals(temp_nome)){
+                            pTemp.remove();
+                            encontrou = true;
+                        }
+                    }
+                    if(!encontrou)
+                        System.out.println("Registro não encontrado!");
+                    else
+                        System.out.println("Registro removido!");
+                    
+                    
                     break;
                 case 4:
                     System.out.println("\n------ LISTA DE REGISTROS ------");
@@ -117,7 +139,6 @@ public class Main {
                         });
                         
                     }
-                    //listarTodos(listaPessoas);
                     System.out.println("tamanho da lista: " + listaPessoas.size());//REMOVER ESTA LINHA
                     System.out.println("------ FIM DA LISTA ------\n");
                     break;
@@ -128,11 +149,4 @@ public class Main {
         }while(op != 0);
         sc.close();
     }
-    
-/*
-    public void listarTodos(List<Pessoa> lista){
-        lista.forEach(p -> {
-                System.out.println(p.toString());
-        });
-    }*/
 }
