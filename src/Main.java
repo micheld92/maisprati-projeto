@@ -29,7 +29,7 @@ public class Main {
         double nota_final;
 
         do{
-            System.out.println("--------MENU--------");
+            System.out.println("--------------- MENU ---------------");
             System.out.println("1: Inserir registro de Pessoa/Aluno");
             System.out.println("2: Alterar dados de Pessoa/Aluno");
             System.out.println("3: Excluir registro de Pessoa/Aluno");
@@ -128,17 +128,17 @@ public class Main {
                         System.out.println("Registro removido!");
                     break;
                 case 4:
-                    System.out.println("\n------ FORAM ENCONTRADOS " + listaPessoas.size() + " REGISTROS ------");
+                    System.out.println("\n----- FORAM ENCONTRADOS " + listaPessoas.size() + " REGISTROS -----");
                     if(listaPessoas.isEmpty())
                         System.out.println("Nenhum registro cadastrado!");
                     else{
                         listaPessoas.forEach(p -> {
                             System.out.println(p.toString());
-                            System.out.println("------------------------");
+                            System.out.println("------------------------------------");
                         });
                         
                     }
-                    System.out.println("--------- FINAL DA LISTA ---------\n");
+                    System.out.println("---------- FINAL DA LISTA ----------\n");
                     break;
                 case 0:
                     System.out.println("Programa encerrado!");
