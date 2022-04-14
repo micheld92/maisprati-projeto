@@ -15,7 +15,7 @@ public class Main {
         listaPessoas.add(new Pessoa("Harry Kane", "2222222", "28/07/1993", "06/04/2022", "10/04/2022"));
         listaPessoas.add(new Pessoa("Lionel Messi", "3333333", "23/02/1985", "24/07/2022", "01/02/2022"));
         listaPessoas.add(new Aluno("Pedro Ernesto", "4444444", "17/06/1965", "10/04/2022", "10/04/2022", 8.0));
-        listaPessoas.add(new Aluno("Margarett Hamilton", "4444444", "17/08/1936", "09/04/2022", "09/04/2022", 10.0));
+        listaPessoas.add(new Aluno("Margaret Hamilton", "4444444", "17/08/1936", "09/04/2022", "09/04/2022", 10.0));
         
         int op;
         String op2;
@@ -138,15 +138,7 @@ public class Main {
                         break;
                 case 4:
                     System.out.println("\n---- FORAM ENCONTRADOS " + listaPessoas.size() + " REGISTROS ----");
-                    if(listaPessoas.isEmpty())
-                        System.out.println("Nenhum registro cadastrado!");
-                    else{
-                        listaPessoas.forEach(p -> {
-                            System.out.println(p.toString());
-                            System.out.println("------------------------------------");
-                        });
-                        
-                    }
+                    listarTodos((ArrayList<Pessoa>) listaPessoas);
                     System.out.println("---------- FINAL DA LISTA ----------");
                     break;
                 case 0:
@@ -155,5 +147,17 @@ public class Main {
             }
         }while(op != 0);
         sc.close();
+    }
+    
+    public static void listarTodos(ArrayList<Pessoa> lista){
+        if(lista.isEmpty())
+            System.out.println("Nenhum registro cadastrado!");
+        else{
+            lista.forEach(p -> {
+                System.out.println(p.toString());
+                System.out.println("------------------------------------");
+            });
+
+        }
     }
 }
